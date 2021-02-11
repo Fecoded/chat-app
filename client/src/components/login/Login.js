@@ -13,16 +13,18 @@ const Login = () => {
         <h1 className="heading">Join</h1>
         <div>
           <input
-            placeholder="Matric No"
+            placeholder="Name"
             className="joinInput"
             type="text"
             onChange={(e) => setName(e.target.value)}
+            required
           />
           <input
             placeholder="Course"
             className="joinInput mt-20"
             type="text"
             onChange={(e) => setRoom(e.target.value)}
+            required
           />
           <Link
             onClick={(e) => (!name || !room) && e.preventDefault()}

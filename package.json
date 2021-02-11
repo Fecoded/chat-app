@@ -1,14 +1,15 @@
 {
-  "name": "chatapp",
+  "name": "discussion_forum",
   "version": "1.0.0",
-  "description": "",
+  "description": "duscussion forum for computer science",
   "main": "server.js",
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix client",
-    "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\""
+    "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Fecoded",
   "license": "ISC",
