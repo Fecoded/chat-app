@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const dotenv = require("dotenv");
 const socketio = require("socket.io");
 const http = require("http");
 const { addUser, removeUser, getUser, getUsersInRoom } = require("./users");
@@ -7,6 +8,7 @@ const { addUser, removeUser, getUser, getUsersInRoom } = require("./users");
 const PORT = process.env.PORT || 5000;
 
 // const router = require("./router");
+dotenv.config({ path: "./config/.env" });
 
 const app = express();
 const server = http.createServer(app);
